@@ -17,81 +17,81 @@ function updatePlanner() {
         console.log('it works')
         $('#time-9am').toggleClass('past')
     }
-    else if(currentTime = time9am.hour()){
+    else if(currentTime == time9am.hour()){
         $('#time-9am').toggleClass('present')
     }
     else {
-        $('time-9am').toggleClass('future')
+        $('#time-9am').toggleClass('future')
     }
 
     if(currentTime > time10am.hour()){
         $('#time-10am').toggleClass('past')
     }
-    else if(currentTime = time9am.hour()){
+    else if(currentTime == time9am.hour()){
         $('#time-10am').toggleClass('present')
     }
     else {
-        $('time-10am').toggleClass('future')
+        $('#time-10am').toggleClass('future')
     }
 
     if(currentTime > time11am.hour()){
         $('#time-11am').toggleClass('past')
     }
-    else if(currentTime = time11am.hour()){
+    else if(currentTime == time11am.hour()){
         $('#time-11am').toggleClass('present')
     }
     else {
-        $('time-11am').toggleClass('future')
+        $('#time-11am').toggleClass('future')
     }
 
     if(currentTime > time12pm.hour()){
         $('#time-12pm').toggleClass('past')
     }
-    else if(currentTime = time12pm.hour()){
+    else if(currentTime == time12pm.hour()){
         $('#time-12am').toggleClass('present')
     }
     else {
-        $('time-12pm').toggleClass('future')
+        $('#time-12pm').toggleClass('future')
     }
     
     if(currentTime > time1pm.hour()){
         $('#time-1pm').toggleClass('past')
     }
-    else if(currentTime = time1pm.hour()){
+    else if(currentTime == time1pm.hour()){
         $('#time-1pm').toggleClass('present')
     }
     else {
-        $('time-1pm').toggleClass('future')
+        $('#time-1pm').toggleClass('future')
     }
 
     if(currentTime > time2pm.hour()){
         $('#time-2pm').toggleClass('past')
     }
-    else if(currentTime = time1pm.hour()){
+    else if(currentTime == time2pm.hour()){
         $('#time-2pm').toggleClass('present')
     }
     else {
-        $('time-2pm').toggleClass('future')
+        $('#time-2pm').toggleClass('future')
     }
     
     if(currentTime > time3pm.hour()){
         $('#time-3pm').toggleClass('past')
     }
-    else if(currentTime = time1pm.hour()){
+    else if(currentTime == time3pm.hour()){
         $('#time-3pm').toggleClass('present')
     }
     else {
-        $('time-3pm').toggleClass('future')
+        $('#time-3pm').toggleClass('future')
     }
 
     if(currentTime > time4pm.hour()){
         $('#time-4pm').toggleClass('past')
     }
-    else if(currentTime = time4pm.hour()){
+    else if(currentTime == time4pm.hour()){
         $('#time-4pm').toggleClass('present')
     }
     else {
-        $('time-4pm').toggleClass('future')
+        $('#time-4pm').toggleClass('future')
     }
 
 
@@ -103,6 +103,7 @@ function updatePlanner() {
         $('#time-5pm').toggleClass('present')
     }
     else {
+        console.log(currentTime, time5pm.hour())
         console.log('We should be logging this')
         $('#time-5pm').toggleClass('future')
     }
