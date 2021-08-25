@@ -146,8 +146,17 @@ function setLocalStorage(){
     
 }
 function retrieveLocalStorage () {
-    var Text9am = document.getElementById('time-9am')
-    Text9am.innertext = localData.getItem('am9')
+    document.getElementById('time-9am').innerText = localData.getItem('am9')
+    document.getElementById('time-10am').innerText = localData.getItem('am10')
+    document.getElementById('time-11am').innerText = localData.getItem('am11')
+    document.getElementById('time-12pm').innerText = localData.getItem('pm12')
+    document.getElementById('time-1pm').innerText = localData.getItem('pm1')
+    document.getElementById('time-2pm').innerText = localData.getItem('pm2')
+    document.getElementById('time-3pm').innerText = localData.getItem('pm3')
+    document.getElementById('time-4pm').innerText = localData.getItem('pm4')
+    document.getElementById('time-5pm').innerText = localData.getItem('pm5')
+    
+    
     
     
 
