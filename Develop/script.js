@@ -1,3 +1,5 @@
+var localData = window.localStorage
+var reUseAbleInputs = []
 var clock = $('#clock')
 var currentTime
 var currentDay
@@ -48,7 +50,7 @@ function updatePlanner() {
         $('#time-12pm').toggleClass('past')
     }
     else if(currentTime == time12pm.hour()){
-        $('#time-12am').toggleClass('present')
+        $('#time-12pm').toggleClass('present')
     }
     else {
         $('#time-12pm').toggleClass('future')
@@ -117,7 +119,36 @@ function updateClock(){
 
 setInterval(updateClock, 1000)
 
-function retrieveList(){
+function setLocalStorage(){
+    console.log('Local Storage has been set')
+    var input9am = document.getElementById('time-9am').value
+    localData.setItem('am9', input9am)
+    var input10am = document.getElementById('time-10am').value
+    localData.setItem('am10', input10am)
+    var input11am = document.getElementById('time-11am').value
+    localData.setItem('am11', input11am)
+    var input12pm = document.getElementById('time-12pm').value
+    localData.setItem('apm12', input12pm)
+    var input1pm = document.getElementById('time-1pm').value
+    localData.setItem('pm1', input1pm)
+    var input2pm = document.getElementById('time-2pm').value
+    localData.setItem('pm2', input2pm)
+    var input3pm = document.getElementById('time-3pm').value
+    localData.setItem('pm3', input3pm)
+    var input4pm = document.getElementById('time-4pm').value
+    localData.setItem('pm4', input4pm)
+    var input5pm = document.getElementById('time-5pm').value
+    localData.setItem('pm5', input5pm)
+    var storedUserInputs = {}
+    storedUserInputs.hours = localData
+    console.log(localData)
+    console.log(localData.getItem('am9'))
+    retrieveLocalStorage()
+    
+}
+function retrieveLocalStorage () {
+    localData.getItem('am9')
+
     
 }
 updateClock()
