@@ -141,13 +141,15 @@ function setLocalStorage(){
     localData.setItem('pm5', input5pm)
     var storedUserInputs = {}
     storedUserInputs.hours = localData
-    console.log(localData)
-    console.log(localData.getItem('am9'))
     retrieveLocalStorage()
     
 }
 function retrieveLocalStorage () {
-    localData.getItem('am9')
+    var Text9am
+    console.log(Text9am)
+    Text9am.innertext = localData.getItem('am9')
+    Text9am.appendChild('time-9am')
+    
 
     
 }
