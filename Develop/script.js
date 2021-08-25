@@ -25,7 +25,7 @@ function updatePlanner() {
     else {
         $('#time-9am').toggleClass('future')
     }
-
+    
     if(currentTime > time10am.hour()){
         $('#time-10am').toggleClass('past')
     }
@@ -35,7 +35,7 @@ function updatePlanner() {
     else {
         $('#time-10am').toggleClass('future')
     }
-
+    
     if(currentTime > time11am.hour()){
         $('#time-11am').toggleClass('past')
     }
@@ -45,7 +45,7 @@ function updatePlanner() {
     else {
         $('#time-11am').toggleClass('future')
     }
-
+    
     if(currentTime > time12pm.hour()){
         $('#time-12pm').toggleClass('past')
     }
@@ -65,7 +65,7 @@ function updatePlanner() {
     else {
         $('#time-1pm').toggleClass('future')
     }
-
+    
     if(currentTime > time2pm.hour()){
         $('#time-2pm').toggleClass('past')
     }
@@ -85,7 +85,7 @@ function updatePlanner() {
     else {
         $('#time-3pm').toggleClass('future')
     }
-
+    
     if(currentTime > time4pm.hour()){
         $('#time-4pm').toggleClass('past')
     }
@@ -95,8 +95,8 @@ function updatePlanner() {
     else {
         $('#time-4pm').toggleClass('future')
     }
-
-
+    
+    
     if(currentTime > time5pm.hour()){
         console.log('it works')
         $('#time-5pm').toggleClass('past')
@@ -109,8 +109,9 @@ function updatePlanner() {
         console.log('We should be logging this')
         $('#time-5pm').toggleClass('future')
     }
+    retrieveLocalStorage()
 }
-    
+
 function updateClock(){
     currentDay = moment().format("dddd, MMM, Do")
     currentTime = moment().hour()
@@ -145,10 +146,9 @@ function setLocalStorage(){
     
 }
 function retrieveLocalStorage () {
-    var Text9am
-    console.log(Text9am)
+    var Text9am = document.getElementById('time-9am')
     Text9am.innertext = localData.getItem('am9')
-    Text9am.appendChild('time-9am')
+    
     
 
     
